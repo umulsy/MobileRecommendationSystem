@@ -44,6 +44,7 @@ Hasil dari deskripsi statistik rating adalah sebagai berikut
 Rata-rata rating yang didapat adalah 4.3
 ### Visualisai distribusi rating
 ![image](https://github.com/user-attachments/assets/1ffef16d-3b75-4bfa-b23d-52b40f2b7674)
+
 Grafik di atas adalah distribusi rating dan jumlah per rating
 ### Melihat banyaknya jumlah corpus pada data
 Untuk mengecek kolom corpus digunakan syntax berikut `len(data.corpus.unique()))`
@@ -53,10 +54,22 @@ Didapatkan kolom corpus berjumlah 1604 berarti terdapat missing value pada kolom
 Setelah dilakukan pengecekan dengan syntax `isna.sum()` ternyata benar terdapat missing value pada kolom corpus sejumlah 12
 ### Membuat sample gambar ponsel
 ![image](https://github.com/user-attachments/assets/d1bffbbb-ec4a-4e34-8099-618493635c56)
+
 Berikut adalah sample gambar ponsel baris kedua pada tabel
 
 
 ## Data Preparation
+Pada data preparation, langkah langkah yang dilakukan adalah sebagai berikut :
+### Menghapus missing value 
+Dilakukan penghapusan kolom yang berisi null pada tabel dengan syntax `dropna()`. Pada tabel ini hanya terdapat pada kolom corpus
+### Membuat rata-rata rating dan jumlahnya
+Pada tahap ini dilakukan untuk analisa lebih lanjut, rata-rata rating akan ditampilkan pada gambar ponsel di akhir
+### Mengubah bentuk data price menjadi data numerik
+Pada kolom data price tidak bertipe numerik. Terdapat simbol mata uang rupee (India) koma (,) , dan titik (.). Agar mempermudah proses analisis maka kolom price diubah ke data bertipe float dengan menhapus seluruh simbol pada data
+### Mengkonversi nilai mata uang
+Berdasarkan dataset, mata uang yang digunakan pada dataset tersebut adalah rupee karena dataset berasal dari India. Untuk menyesuaikan harga ponsel dengan harga pasar Indonesia, dalam proyek ini dikalikan dengan Rp188,71 karena `1 rupe = Rp188,71`
+### Menambahkan kolom brand dan kategori harga (opsional)
+Pada proyek ini ditambahkan kolom brand dan kategori harga untuk pengembangan proyek analisis lebih lanjut. Tidak digunakan dalam proyek submission ini.
 ## Modeling
 ## Evaluation
 ## References
