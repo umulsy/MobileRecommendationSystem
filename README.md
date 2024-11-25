@@ -87,12 +87,9 @@ Untuk mengetahui seberapa baik model dalam memberikan sebuah rekomendasi dapat d
 `k` : Banyak rekomendasi yang ingin diberikan. Pada proyek ini 5
 
 Sample Hasil Rekomendasi dari Ponsel `OPPO Find X (Glacier Blue, 256 GB)` adalah sebagai berikut :
-  |      **name**	                     |        **corpus**                                |
-0	|OPPO R17 Pro (Radiant Mist, 128 GB) |	Storage128 GBRAM8 SystemAndroid Oreo 8.1Proce...|
-1	|OPPO K1 (Astral Blue, 64 GB)	       | Storage64 GBRAM6 GBExpandable Storage256GB Sy... |
-2	|OPPO F7 (Red, 128 GB)	             | Storage128 GBRAM6 GBExpandable Storage256GB S... |
-3	|OPPO F7 (Black, 128 GB)	           | Storage128 GBRAM6 GBExpandable Storage256GB S... |
-4	|OPPO F7 (Black, 64 GB)	             | Storage64 GBRAM4 GBExpandable Storage256GB Sy... |
+
+<img width="437" alt="image" src="https://github.com/user-attachments/assets/173cd2d4-4b4b-409c-b304-bb1c8aafe77d">
+
 
 
 ### Membuat Visualisasi Gambar Hasil Rekomendasi
