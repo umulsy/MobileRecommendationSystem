@@ -71,5 +71,8 @@ Berdasarkan dataset, mata uang yang digunakan pada dataset tersebut adalah rupee
 ### Menambahkan kolom brand dan kategori harga (opsional)
 Pada proyek ini ditambahkan kolom brand dan kategori harga untuk pengembangan proyek analisis lebih lanjut. Tidak digunakan dalam proyek submission ini.
 ## Modeling
+### TF-IDF Vektorisasi
+Pada tahap ini, akan dibangun sistem rekomendasi berdasarkan spesifika yang dimiliki ponsel. Teknik ini digunakan pada sistem rekomendasi untuk menemukan representasi fitur penting dari setiap spesifikasi ponsel. TF-IDF merupakan teknik pembobotan kata yang berbasis pada statistik kemunculan kata dan tingkat kepentingan dokumen yang mengandungnya. Pembobotan kata ini merupakan hasil dari perkalian term frequency dan inverse document frequency yang tiap nilainya didapatkan dari (1) dimana wi adalah kata ke-I, d adalah dokumen, TF(wi, d) adalah jumlah kemunculan kata wi pada dokumen d dan IDF(wi) adalah nilai inverse document frequency dari wi.
+$TF∗IDF=TF(Wi,d )∗IDF(Wi)$
 ## Evaluation
 ## References
