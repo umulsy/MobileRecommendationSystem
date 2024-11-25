@@ -72,7 +72,7 @@ Berdasarkan dataset, mata uang yang digunakan pada dataset tersebut adalah rupee
 Pada proyek ini ditambahkan kolom brand dan kategori harga untuk pengembangan proyek analisis lebih lanjut. Tidak digunakan dalam proyek submission ini.
 ## Modeling
 ### TF-IDF Vektorisasi
-Pada tahap ini, akan dibangun sistem rekomendasi berdasarkan spesifika yang dimiliki ponsel. Teknik ini digunakan pada sistem rekomendasi untuk menemukan representasi fitur penting dari setiap spesifikasi ponsel. TF-IDF merupakan teknik pembobotan kata yang berbasis pada statistik kemunculan kata dan tingkat kepentingan dokumen yang mengandungnya. Pembobotan kata ini merupakan hasil dari perkalian term frequency dan inverse document frequency yang tiap nilainya didapatkan dari (1) dimana wi adalah kata ke-I, d adalah dokumen, TF(wi, d) adalah jumlah kemunculan kata wi pada dokumen d dan IDF(wi) adalah nilai inverse document frequency dari wi.
+Pada tahap ini, akan dibangun sistem rekomendasi berdasarkan spesifika yang dimiliki ponsel. Teknik ini digunakan pada sistem rekomendasi untuk menemukan representasi fitur penting dari setiap spesifikasi ponsel. TF-IDF merupakan teknik pembobotan kata yang berbasis pada statistik kemunculan kata dan tingkat kepentingan dokumen yang mengandungnya. Pembobotan kata ini merupakan hasil dari perkalian term frequency dan inverse document frequency yang tiap nilainya didapatkan dari (1) dimana wi adalah kata ke-I, d adalah dokumen, TF(wi, d) adalah jumlah kemunculan kata wi pada dokumen d dan IDF(wi) adalah nilai inverse document frequency dari wi (Fachriza, dkk. 2020)
 
 $TF∗IDF=TF(Wi,d )∗IDF(Wi)$
 
@@ -99,5 +99,15 @@ Gambar hasil rekomendasi `OPPO Find X (Glacier Blue, 256 GB)`
 ![image](https://github.com/user-attachments/assets/00f1c1a0-4b7e-4cbd-ac93-83672ff19467)
 
 ## Evaluation
+Pada tahap ini akan digunakan Precision untuk mengevaluasi hasil dari rekomendasi pada tabel 8. Precision dapat didefinisikan sebagai berikut:
+
+Precision = $r/i$
+
+r= total rekomendasi yang relevan
+i= jumlah rekomendasi yang diberikan
+Dari hasil rekomendasi tabel di atas, `OPPO Find X (Glacier Blue, 256 GB)`memiki spesifikasi yang tertera pada corpus . Dari 5 item yang direkomendasikan, 5 item memiliki kemiripan spesifikasi mulai dari storage, camera, dll. Artinya, precision sistem sebesar 10/10 atau 100%.
 
 ## References
+Almyra Soumi Sinapoy, K. Y.S. Putri (2021). PENGARUH PENGGUNAAN PONSEL BERLEBIH TERHADAP PERUBAHAN SIKAP REMAJA ILMU KOMUNIKASI UNIVERSITAS NEGERI JAKARTA, Jurnal Common Volume 5 Nomor 2. [https://doi.org/10.21512/humaniora.v6i4.3376](https://doi.org/10.34010/common)
+
+Fachriza Dian Adhiatma, Anita Qoiriah (2020). Penerapan Metode TF-IDF dan Deep Neural Network untuk Analisa Sentimen pada Data Ulasan Hotel. ISSN : 2686-2220. Fakultas Teknik, Universitas Negeri Surabaya. 
