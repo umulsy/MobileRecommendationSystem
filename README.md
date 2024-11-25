@@ -73,6 +73,34 @@ Pada proyek ini ditambahkan kolom brand dan kategori harga untuk pengembangan pr
 ## Modeling
 ### TF-IDF Vektorisasi
 Pada tahap ini, akan dibangun sistem rekomendasi berdasarkan spesifika yang dimiliki ponsel. Teknik ini digunakan pada sistem rekomendasi untuk menemukan representasi fitur penting dari setiap spesifikasi ponsel. TF-IDF merupakan teknik pembobotan kata yang berbasis pada statistik kemunculan kata dan tingkat kepentingan dokumen yang mengandungnya. Pembobotan kata ini merupakan hasil dari perkalian term frequency dan inverse document frequency yang tiap nilainya didapatkan dari (1) dimana wi adalah kata ke-I, d adalah dokumen, TF(wi, d) adalah jumlah kemunculan kata wi pada dokumen d dan IDF(wi) adalah nilai inverse document frequency dari wi.
+
 $TF∗IDF=TF(Wi,d )∗IDF(Wi)$
+
+### Cosine Similiarity
+Cosine similarity mengukur kesamaan antara dua vektor dan menentukan apakah kedua vektor tersebut menunjuk ke arah yang sama. Ia menghitung sudut cosinus antara dua vektor. Semakin kecil sudut cosinus, semakin besar nilai cosine similarity. Metrik ini sering digunakan untuk mengukur kesamaan dokumen dalam analisis teks. Sebagai contoh, dalam studi kasus ini, cosine similarity digunakan untuk mengukur kesamaan nama restoran dan nama masakan. Pada proyek ini, akan dicari tingkat kemiripan spesifikasi hp dengan nama hp.
+
+Untuk mengetahui seberapa baik model dalam memberikan sebuah rekomendasi dapat dibuah sebuah fungsi yang akan menerima nama_hp, similarity_data, items, k dengan definisi masing-masing parameter sebagai berikut:
+
+`nama_hp`: Nama hp
+`similarity_data`: DataFrame mengenai similarity yang telah dibuat di tahap sebelumnya.
+`items` : Nama dan fitur yang digunakan untuk mendefinisikan kemiripan, dalam hal ini adalah name dan corpus
+`k` : Banyak rekomendasi yang ingin diberikan. Pada proyek ini 5
+
+Sample Hasil Rekomendasi dari Ponsel `OPPO Find X (Glacier Blue, 256 GB)` adalah sebagai berikut :
+  |      **name**	                     |        **corpus**                                |
+0	|OPPO R17 Pro (Radiant Mist, 128 GB) |	Storage128 GBRAM8 SystemAndroid Oreo 8.1Proce...|
+1	|OPPO K1 (Astral Blue, 64 GB)	       | Storage64 GBRAM6 GBExpandable Storage256GB Sy... |
+2	|OPPO F7 (Red, 128 GB)	             | Storage128 GBRAM6 GBExpandable Storage256GB S... |
+3	|OPPO F7 (Black, 128 GB)	           | Storage128 GBRAM6 GBExpandable Storage256GB S... |
+4	|OPPO F7 (Black, 64 GB)	             | Storage64 GBRAM4 GBExpandable Storage256GB Sy... |
+
+
+### Membuat Visualisasi Gambar Hasil Rekomendasi
+Pada tahap ini dibuat fungsi `visualisasi_mobile` untuk membuat gambar hasil rekomendasi. Fungsi ini menggunakan kolom `img_URL , rating, dan price`. Hasil visualisasi akan menampilkan gambar ponsel, rating, dan harga ponsel dari rekomendasi ponsel yang diinginkan
+Gambar hasil rekomendasi `OPPO Find X (Glacier Blue, 256 GB)`
+
+![image](https://github.com/user-attachments/assets/00f1c1a0-4b7e-4cbd-ac93-83672ff19467)
+
 ## Evaluation
+
 ## References
